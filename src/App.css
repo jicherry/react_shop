@@ -1,19 +1,11 @@
 .main-bg {
-  height: 330px;
-  background-image: url(./img/낫띵.png);
-  background-size: cover;
+  height: 950px;
+  background-image: url(./img/eye.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+
 }
 
-.col-md-4 img {
-  margin-top: 160px;
-}
-
-.col-md-4 h4 {
-  margin-top: 30px;
-  font-size: 16px;
-  font-weight: bold;
-}
 
 .App {
   text-align: center;

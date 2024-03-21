@@ -2,60 +2,43 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import {  Navbar, Container , Nav } from 'react-bootstrap'; //대문자로 된 컴포넌트 다 Import 해야 함
-import data from './data.js';
-import { Routes, Route, Link } from 'react-router-dom'
+
+
+
 
 function App() {
- 
-  let [shop] = useState(data);
 
+  let [shop] = useState();
 
   return (
-    <div className="App">
-
-      <Navbar bg="light" data-bs-theme="light">
+    <div className='App'>
+      <Navbar bg='light' variant='light'>
         <Container>
-        <Link to= '/'>notting-written</Link>
-          <Nav className="me-auto">
-            <Link to= '/detail'>outer</Link>
-            <Nav.Link href="#features">knit</Nav.Link>
-            <Nav.Link href="#pricing">bottom</Nav.Link>
+          <Navbar.Brand href='#home'>WONDEREGO</Navbar.Brand>
+          <Nav className='me-auto'>
+            <Nav.Link href='#features'>SUNGLASSES</Nav.Link>
+            <Nav.Link href='#features'>EYEGLASSES</Nav.Link>
+            <Nav.Link href='#features'>ACC</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
+    
+      <div className='main-bg'></div> 
 
-
-      <Routes>
-        <Route path='/' element={
-        <>
-            <div className='main-bg'></div>
-            <div className='container'>
-              <div className='row'>
-            { shop.map(function(a, i){
-              return <Card shop = {shop[i]} i={i + 1} />
-            })}
-            </div>
-            </div>
-        </>
-      } />  
-        <Route path='/detail' element={<div>상세페이지</div>} />
-      </Routes>
-
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-4'></div>
+          <div className='col-md-4'></div>
+          <div className='col-md-4'></div>
+        </div>
+      </div>
     </div>
-      )
+
+ 
+      );
     }
 
 
-function Card(props) {
 
-  return(
-    <div className='col-md-4'>
-    <img src={process.env.PUBLIC_URL + './img/outer' + props.i + '.jpeg'}
-      width= '50%'></img>
-      <h4>{props.shop.title}</h4>
-      <p>{props.shop.price}</p>
-    </div>
-  )
-}
 
 export default App;
