@@ -2,7 +2,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import {  Navbar, Container , Nav } from 'react-bootstrap'; //대문자로 된 컴포넌트 다 Import 해야 함
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
+import Etc from './routes/Etc.js'
+import About from './routes/About.js'
+import Detail from './routes/Detail.js'
 
 
 
@@ -10,28 +13,46 @@ import { Routes, Route, Link } from 'react-router-dom'
 function App() {
 
   let [shop] = useState();
+  let navigate = useNavigate();
 
   return (
     <div className='App'>
 
-      <Routes>
-        <Route path='/detail' element={<>상세페이지</>} />
-        <Route path='about' element={<>상세페이지2</>} />
-        <Route path='etc' element={<>상세페이지3</>} />
-      </Routes>
-
       <Navbar bg='light' variant='light'>
         <Container>
-          <Navbar.Brand href='#home'>WONDEREGO</Navbar.Brand>
+          <Nav.Link onClick={() => { 
+            navigate('/')
+          }}>WONDEREGO</Nav.Link>
+
           <Nav className='me-auto'>
-            <Link to='/detail'>SUNGLASSES</Link>
-            <Link to='/about'>EYEGLASSES</Link>
-            <Link to='/etc'>ACC</Link>
+            <Nav.Link onClick={() => {
+              navigate('/detail')
+            }}>SUNGLASSES</Nav.Link>
+
+            <Nav.Link onClick={() => {
+              navigate('/about')
+            }}>EYEGLASSES</Nav.Link>
+
+            <Nav.Link onClick={() => {
+              navigate('/etc')
+            }}>ACC</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
+
+      <Routes>
+        <Route path='/' element={<div>
+          <div className='main-bg'></div> 
+        </div>} />
+        <Route path='/detail' element={<Detail />} />
+
+        <Route path='/about' element={<About />} />
+
+        <Route path='/etc' element={<Etc />} />
+
+        <Route path='*' element={<div>없는 페이지 입니다.</div>} />
+      </Routes>
     
-      <div className='main-bg'></div> 
 
       <div className='container'>
         <div className='row'>
@@ -46,7 +67,7 @@ function App() {
       );
     }
 
-
+  
 
 
 export default App;
