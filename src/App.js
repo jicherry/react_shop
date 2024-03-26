@@ -6,7 +6,7 @@ import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
 import Etc from './routes/Etc.js'
 import About from './routes/About.js'
 import Detail from './routes/Detail.js'
-
+// import axios from 'axios';
 
 
 
@@ -22,7 +22,7 @@ function App() {
         <Container>
           <Nav.Link onClick={() => { 
             navigate('/')
-          }}>WONDEREGO</Nav.Link>
+          }} style={ { fontSize : '25px' , margin : '7px' } }>WONDEREGO</Nav.Link>
 
           <Nav className='me-auto'>
             <Nav.Link onClick={() => {
@@ -66,6 +66,7 @@ function App() {
  
       );
     }
+
 
   
 
