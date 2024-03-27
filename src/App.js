@@ -7,6 +7,7 @@ import Etc from './routes/Etc.js'
 import About from './routes/About.js'
 import Detail from './routes/Detail.js'
 // import axios from 'axios';
+import Cart from './routes/Cart.js'
 
 
 
@@ -36,6 +37,10 @@ function App() {
             <Nav.Link onClick={() => {
               navigate('/etc')
             }}>ACC</Nav.Link>
+            
+            <Nav.Link onClick={() => {
+              navigate('/cart')
+            }}>CART</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -49,6 +54,8 @@ function App() {
         <Route path='/about' element={<About />} />
 
         <Route path='/etc' element={<Etc />} />
+
+        <Route path='/cart' element={<Cart />} />
 
         <Route path='*' element={<div>없는 페이지 입니다.</div>} />
       </Routes>
