@@ -11,6 +11,7 @@ import Cart from './routes/Cart.js'
 
 
 
+
 function App() {
 
   let [shop] = useState();
@@ -56,7 +57,7 @@ function App() {
         <Route path='/etc' element={<Etc />} />
 
         <Route path='/cart' element={<Cart />} />
-
+        
         <Route path='*' element={<div>없는 페이지 입니다.</div>} />
       </Routes>
     
@@ -67,11 +68,44 @@ function App() {
           <div className='col-md-4'></div>
           <div className='col-md-4'></div>
         </div>
+        <Footer />
       </div>
     </div>
 
  
       );
+    }
+
+
+    function Footer(props){
+      return(
+        <div className='footer-container'>
+          <div className='footer-content' 
+          style={ {display : 'flex' , float: 'left' , display : 'inline-block' } }>
+            <h6 style={ { fontWeight : 'bold' } }>고객서비스</h6>
+            <p><Nav.Link onClick={() => {
+                props.navigate('')
+              }}>Q&A</Nav.Link></p>
+            <p>배송조회</p>
+            <p>교환 및 반품</p>
+            <p>A/S 접수</p>
+          </div>
+          <div className='footer-content' 
+          style={ {display : 'flex' , float: 'left' , display : 'inline-block' } }>
+            <h6 style={ { fontWeight : 'bold' } }>Customer Service</h6>
+            <p>제품 및 AS 문의 : cs@carin2014.com</p>
+            <p>운영시간 : 대표 마음대로</p>
+            <p></p>
+          </div>
+          <div className='footer-content' 
+          style={ {display : 'flex' , float: 'left' , display : 'inline-block' } }>
+            <h6 style={ { fontWeight : 'bold' } }>Company Information</h6>
+            <p>대표자명 : 김태민</p>
+            <p>대표전화번호 : 010 - 7190 - 1714</p>
+            <p>주소 : 인천시 연수구 송도동</p>
+          </div>
+        </div>
+      )
     }
 
 
