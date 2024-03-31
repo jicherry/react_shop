@@ -1,5 +1,5 @@
 function Etc(){
-    const taeminImage = ['acc.PNG', 'acc2.PNG', 'acc3.PNG'];
+    const AccImage = ['acc.PNG', 'acc2.PNG', 'acc3.PNG'];
     return (
         <div className="container">
             <div className="row">
@@ -10,9 +10,9 @@ function Etc(){
                     <p>WONDEREGO 만의 감성이 담긴 아이웨어 액세서리를 만나보세요.</p>
                     <div style={ { display : 'flex' } }>
                         {
-                            taeminImage.map((props) => {
+                            AccImage.map((props) => {
                                 return(
-                                    <img src={require(`../img/${props}`)} style={ { padding : '20px' } } ></img>
+                                    <img src={require(`../img/${props}`)} style={ { padding : '15px' } } ></img>
                                 )
                             })
                         }
