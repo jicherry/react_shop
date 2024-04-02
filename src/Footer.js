@@ -16,7 +16,7 @@ import Cart from './routes/Cart.js'
       return(
         <div className='footer-container'>
           <div className='footer-content' 
-          style={ {display : 'flex' , float: 'left' , display : 'inline-block' } }>
+          style={ {display : 'flex' , float: 'left' , display : 'inline-block'} }>
             <h6 style={ { fontWeight : 'bold' } }>고객서비스</h6>
             <p><Nav.Link onClick={() => {
                 navigate('/')
@@ -26,14 +26,14 @@ import Cart from './routes/Cart.js'
             <p>A/S 접수</p>
           </div>
           <div className='footer-content' 
-          style={ {display : 'flex' , float: 'left' , display : 'inline-block' } }>
+          style={ {display : 'flex' , float: 'left' , display : 'inline-block'} }>
             <h6 style={ { fontWeight : 'bold' } }>Customer Service</h6>
             <p>제품 및 AS 문의 : cs@carin2014.com</p>
             <p>운영시간 : 대표 마음대로</p>
             <p></p>
           </div>
           <div className='footer-content' 
-          style={ {display : 'flex' , float: 'left' , display : 'inline-block' } }>
+          style={ {display : 'flex' , float: 'left' , display : 'inline-block'} }>
             <h6 style={ { fontWeight : 'bold' } }>Company Information</h6>
             <p>대표자명 : 김태민</p>
             <p>대표전화번호 : 010 - 7190 - 1714</p>
