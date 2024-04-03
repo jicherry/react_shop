@@ -16,14 +16,19 @@ import Cart from './routes/Cart.js'
       return(
         <div className='footer-container'>
           <div className='footer-content' 
-          style={ {display : 'flex' , float: 'left' , display : 'inline-block'} }>
+          style={ {display : 'flex' , float: 'left' , display : 'inline-block',} }>
             <h6 style={ { fontWeight : 'bold' } }>고객서비스</h6>
             <p><Nav.Link onClick={() => {
-                navigate('/')
+                navigate('/QA')
               }}>Q&A</Nav.Link></p>
-            <p>배송조회</p>
-            <p>교환 및 반품</p>
-            <p>A/S 접수</p>
+
+            <p><Nav.Link onClick={() => {
+                navigate('/Login')
+              }}>배송조회</Nav.Link></p>
+
+            <p><Nav.Link onClick={() => {
+                navigate('/Login')
+              }}>A/S 접수</Nav.Link></p>
           </div>
           <div className='footer-content' 
           style={ {display : 'flex' , float: 'left' , display : 'inline-block'} }>
