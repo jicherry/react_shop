@@ -14,7 +14,7 @@ import Cart from './routes/Cart.js'
       let navigate = useNavigate();
 
       return(
-        <div className='footer-container'>
+        <div className='footer-container' style={ {height : '250px', background : 'lightgray'} }>
           <div className='footer-content' 
           style={ {display : 'flex' , float: 'left' , display : 'inline-block',} }>
             <h6 style={ { fontWeight : 'bold' } }>고객서비스</h6>
